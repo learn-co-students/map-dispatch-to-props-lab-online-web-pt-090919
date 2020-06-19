@@ -25,10 +25,6 @@ export class RestaurantInput extends Component {
     event.preventDefault();
     const rest = {...this.state}
     this.props.addRestaurant(rest);
-    this.setState({
-      name: '',
-      location: ''
-    });
   }
 
   render() {
