@@ -4,8 +4,15 @@ import { connect } from 'react-redux';
 class Restaurants extends Component {
 
   render() {
-
-    let restaurants = this.props.restaurants.map((restaurant, index) => <li key={index}>{restaurant.name}</li>);
+    console.log(this.props)
+    const restaurants = this.props.restaurants.map((restaurant, index) => {
+      return (
+        <li key={index}>
+          <span>{restaurant.name} </span>
+          <span>{restaurant.location}</span>
+        </li>
+      )
+    });
 
     return (
       <div>
